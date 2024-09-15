@@ -4,7 +4,7 @@ module.exports = {
 
   output: 'export',
   assetPrefix: './',
-  basePath: '/developer-portfolio',
+  basePath: '/portfolio-website',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
