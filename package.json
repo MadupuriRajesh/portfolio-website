@@ -2,12 +2,15 @@
   "name": "developer-portfolio",
   "description": "Portfolio of Rajesh Madupuri",
   "version": "0.1.0",
+  "homepage": "https://MadupuriRajesh.github.io/portfolio-website",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
@@ -26,6 +29,7 @@
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "gh-pages": "^6.1.1",
     "postcss": "latest",
     "sass": "^1.69.5",
     "tailwindcss": "latest"
