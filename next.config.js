@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
 
   output: 'export',
-  assetPrefix: './',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio-website/' : '',
   basePath: '/portfolio-website',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
