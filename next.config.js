@@ -1,10 +1,8 @@
 const path = require('path')
- 
-module.exports = {
 
-  output: 'export',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio-website/' : '',
-  basePath: '/portfolio-website',
+const isProd = process.env.NODE_ENV === 'production';
+
+module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
@@ -21,5 +19,9 @@ module.exports = {
         pathname: '**',
       },
     ],
+    unoptimized: true,
   },
+  basePath: isProd ? '/portfolio-website' : '', 
+  assetPrefix: isProd ? '/portfolio-website/' : '', 
+  output: 'export',
 }
